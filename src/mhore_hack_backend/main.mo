@@ -88,7 +88,7 @@ type Subscription = {
 
   // delete content
   public shared({caller}) func deleteContent(id : Nat) : async Bool {
-    if let index = Array.findIndex((c) => c.id == id, contents) then {
+    if (let index = Array.findIndex((c) => c.id == id, contents) then {
       if (contents[index].uploader == caller) {
         contents := Array.remove(index, contents);
         return true;
@@ -97,7 +97,7 @@ type Subscription = {
       }
     } else {
       return false; 
-    }
+    })
   };
 
   // check age restriction of content
