@@ -3,7 +3,6 @@ import { mhore_hack_backend } from 'declarations/mhore_hack_backend';
 import axios from 'axios';
 import { createActor } from '@dfinity/agent';
 import { Actor, HttpAgent } from '@dfinity/agent';
-import { idlFactory, canisterId } from "src/mhore_hack_backend/main.mo";
 
 function App(){
   const [email, setEmail] = useState('');
@@ -11,7 +10,7 @@ function App(){
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('/api/login', { email, password });
+      const response = await axios.post("src/mhore_hack_backend/main.m", { email, password });
       console.log(response.data);
       // Handle successful login
     } catch (error) {
