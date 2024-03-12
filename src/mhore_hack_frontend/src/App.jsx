@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { mhore_hack_backend } from 'declarations/mhore_hack_backend';
-import React, { useState } from 'react';
 import axios from 'axios';
 import { createActor } from '@dfinity/agent';
 import { Actor, HttpAgent } from '@dfinity/agent';
-import { idlFactory, canisterId } from 'src/hackathon_backend/main.mo';
+import { idlFactory, canisterId } from "src/mhore_hack_backend/main.mo";
 
 function App(){
   const [email, setEmail] = useState('');
