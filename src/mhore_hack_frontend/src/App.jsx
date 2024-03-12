@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { createActor } from '@dfinity/agent';
 
 function App() {
   const [email, setEmail] = useState('');
