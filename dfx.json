@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "mhore_hack_backend": {
+      "main": "src/mhore_hack_backend/main.mo",
+      "type": "motoko"
+    },
+    "mhore_hack_frontend": {
+      "dependencies": [
+        "mhore_hack_backend"
+      ],
+      "source": [
+        "src/mhore_hack_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "mhore_hack_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
